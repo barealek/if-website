@@ -3,6 +3,8 @@ interface Props {
 	title: string;
 }
 
+import ViewTransitions from 'astro/components/ViewTransitions.astro';
+
 const { title } = Astro.props;
 ---
 
@@ -15,8 +17,22 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+	.text-mulish {
+		font-family: Mulish, sans-serif;
+	}
+
+	.bg-prism {
+		background-image: url("/wavey-bg.svg");
+		background-color: #222;
+	}
+</style>
