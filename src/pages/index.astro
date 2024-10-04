@@ -7,18 +7,19 @@ import Base from "../layouts/Base.astro"
 <Base title="Aleksander">
 	<main class="h-screen flex flex-col items-center justify-center bg-prism">
 
-		<div class="size-72 overflow-hidden rounded-full ring-[#222222] ring-2">
-			<img class="overflow-hidden object-cover object-top -mt-10 vignette" src="/img/alek.jpg" alt="alek">
-		</div>
-		<div class="mt-5 flex gap-1 items-end">
-			<h1 class="text-4xl font-bold text-gray-100 text-mulish">Aleksander</h1>
-			<p class="text-gray-400">17 år</p>
+		<div transition:name="hero" class="flex flex-col items-center">
+			<div transition:name="heroimg" class="size-72 overflow-hidden rounded-full ring-[#222222] ring-2">
+				<img class="overflow-hidden object-cover object-top -mt-10" src="/img/alek.jpg" alt="alek">
+			</div>
+			<div class="mt-5 flex gap-1 items-end">
+				<h1 class="text-4xl font-bold text-gray-100 text-mulish">Aleksander</h1>
+				<p class="text-gray-400">17 år</p>
+			</div>
+
 		</div>
 
 		<div class="flex mt-5 gap-4">
 			<LinkButton href="/bog">Blå bog</LinkButton>
-			<LinkButton href="/blog">Blog</LinkButton>
-			<LinkButton href="/cv">CV</LinkButton>
 		</div>
 
 	</main>
