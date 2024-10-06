@@ -9,7 +9,9 @@ import Base from "../layouts/Base.astro"
 
 		<div transition:name="hero" class="flex flex-col items-center">
 			<div transition:name="heroimg" class="size-72 overflow-hidden rounded-full ring-[#222222] ring-2">
-				<img class="overflow-hidden object-cover object-top -mt-10" src="/img/alek.jpg" alt="alek">
+				<div class="overflow-hidden object-cover object-top -mt-10">
+					<div class="bg-[url('/img/alek.jpg')]"></div>
+				</div>
 			</div>
 			<div class="mt-5 flex gap-1 items-end">
 				<h1 class="text-4xl font-bold text-gray-100 text-mulish">Aleksander</h1>
@@ -29,5 +31,17 @@ import Base from "../layouts/Base.astro"
 	.vignette {
 		box-sizing: border-box;
 		box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+	}
+
+	.glow::after {
+		content: "";
+		position: absolute;
+		z-index: -10;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: inherit;
+		filter: blur(10px);
 	}
 </style>
