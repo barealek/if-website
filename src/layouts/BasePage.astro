@@ -21,8 +21,8 @@ const { title } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body>
-		<div class="overflow-hidden absolute h-screen w-screen -z-10" transition:persist="animbgp">
-			<div class="animbg" transition:persist="animbg"></div>
+		<div class="overflow-hidden absolute h-screen w-screen -z-10">
+			<div class="animbg"></div>
 		</div>
 
 	   {/* Return to other page arrow */}
@@ -38,6 +38,10 @@ const { title } = Astro.props;
 
 	.text-mulish {
 		font-family: Mulish, sans-serif;
+	}
+
+	body {
+		background-color: #19192e;
 	}
 
 
