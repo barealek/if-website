@@ -1,7 +1,22 @@
 ---
-const {href} = Astro.props;
+const {href, color} = Astro.props;
+
+var colorMap = {
+	'red': 'border-red-600 text-red-400 hover:text-red-200',
+	'blue': 'border-blue-600 text-blue-400 hover:text-blue-200',
+	'green': 'border-green-600 text-green-400 hover:text-green-200',
+	'yellow': 'border-yellow-600 text-yellow-400 hover:text-yellow-200',
+	'purple': 'border-purple-600 text-fuchsia-400 hover:text-fuchsia-200',
+	'gray': 'border-neutral-600 text-neutral-400 hover:text-neutral-200'
+}
+
+var actualColor = colorMap['gray']
+if (color != undefined) {
+	actualColor = colorMap[color]
+}
+
 ---
 
-<a href={href} class="text-gray-400 text-sm overflow-hidden">
+<a class=`flex gap-1 items-center border-2 rounded-lg px-2 py-1 ${actualColor} text-sm overflow-hidden cursor-pointer transition-colors` href={href}>
 	<slot />
 </a>
