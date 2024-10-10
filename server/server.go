@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"fmt"
 	"net/http"
 	"strconv"
 
@@ -26,9 +27,17 @@ func LogMiddleware(next http.Handler) http.Handler {
 		next.ServeHTTP(srw, r)
 
 		var s string
-		statusCode := lipgloss.NewStyle().Background(lipgloss.Color("#007000")).Render(strconv.Itoa(srw.statusCode))
+		statusCode := lipgloss.NewStyle().Background(lipgloss.Color("#007000")).Render(strconv.Itoa(srw.statusCode)) + " - "
 		s += statusCode
 
+		ip := r.Header.Get("CF-Connecting-IP")
+
+		s += lipgloss.NewStyle().Foreground(lipgloss.Color("#a0a0a0")).Render(ip) + " "
+
+		path := r.URL.Path
+		s += lipgloss.NewStyle().Foreground(lipgloss.Color("#606060")).Render(path) + " "
+
+		fmt.Print(s + "\n")
 	})
 }
 
