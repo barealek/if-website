@@ -1,4 +1,4 @@
-name: jmarket
+name: alek.codes
 services:
   web:
     image: ghcr.io/barealek/ifpage:latest
