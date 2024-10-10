@@ -5,44 +5,49 @@ import Base from "../layouts/BasePage.astro"
 ---
 
 <Base title="Alek | Blå bog">
-	<main class="flex flex-col items-center gap-4 p-4 h-screen">
+	<section class="flex flex-col items-center gap-4 p-4 h-screen">
+		<div class="bg-neutral-900/50 backdrop-blur-md rounded-xl min-w-[50dvw] p-8 mt-24">
 		<div transition:name="hero" class="flex flex-col items-center">
-			<div transition:name="heroimg" class="size-48 overflow-hidden rounded-full ring-[#222222] ring-2">
-				<img class="overflow-hidden object-cover object-top -mt-10" src="/img/alek.jpg" alt="alek">
+				<div transition:name="heroimg" class="size-40 overflow-hidden rounded-full ring-[#222222] ring-2">
+					<img class="overflow-hidden object-cover object-top -mt-10" src="/img/alek.jpg" alt="alek">
+				</div>
+				<div class="mt-2 flex gap-1 items-end">
+					<h1 class="text-2xl font-bold text-gray-100 text-mulish">Aleksander</h1>
+					<p class="text-gray-400 text-sm">17 år</p>
+				</div>
 			</div>
-			<div class="mt-2 flex gap-1 items-end">
-				<h1 class="text-2xl font-bold text-gray-100 text-mulish">Aleksander</h1>
-				<p class="text-gray-400 text-sm">17 år</p>
+
+
+			<div class="flex items-center justify-center mt-8">
+				<div class="grid text-lg text-neutral-100">
+					<div class="flex gap-4 border-b border-purple-500 py-1 ">
+						<p class="font-bold">Kaldenavn</p>
+						<p class="text-right w-full">Alek</p>
+					</div>
+					<div class="flex gap-4 border-b border-purple-500 py-1 ">
+						<p class="font-bold">Øjenfarve</p>
+						<p class="text-right w-full">Blå</p>
+					</div>
+					<div class="flex gap-4 border-b border-purple-500 py-1 ">
+						<p class="font-bold">LoC</p>
+						<p class="text-right w-full">2,7 mil.</p>
+					</div>
+					<div class="flex gap-4 border-b border-purple-500 py-1 ">
+						<p class="font-bold">Interesser</p>
+						<p class="text-right w-full">Idk, kode ig?</p>
+					</div>
+					<div class="flex gap-4 border-b border-purple-500 py-1 ">
+						<p class="font-bold">Konto</p>
+						<p class="text-right w-full">55 kr.</p>
+					</div>
+					<div class="flex gap-4 py-1 ">
+						<p class="font-bold">Yndlingsfarve</p>
+						<p class="text-right w-full">Orange</p>
+					</div>
+				</div>
 			</div>
+
 		</div>
 
-		<div class="bg-neutral-700 rounded-lg">
-			<table class="table-auto w-full">
-				<thead>
-					<tr>
-						<th>Datum</th>
-						<th>Titel</th>
-						<th>Beskrivelse</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>2022-09-01</td>
-						<td>Blå bog</td>
-						<td>En bog om blå bog</td>
-					</tr>
-					<tr>
-						<td>2022-09-02</td>
-						<td>Blå bog</td>
-						<td>En bog om blå bog</td>
-					</tr>
-					<tr>
-						<td>2022-09-03</td>
-						<td>Blå bog</td>
-						<td>En bog om blå bog</td>
-					</tr>
-			</table>
-		</div>
-
-	</main>
+	</section>
 </Base>
