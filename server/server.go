@@ -29,14 +29,13 @@ func LogMiddleware(next http.Handler) http.Handler {
 		statusCode := lipgloss.NewStyle().Background(lipgloss.Color("#007000")).Render(strconv.Itoa(srw.statusCode))
 		s += statusCode
 
-		fmt.Println(s)
-
-		// bufio.NewWriter(os.Stdout).WriteString(s)
 	})
 }
 
 func main() {
 	fs := http.FileServer(http.Dir("dist"))
 	http.Handle("/", LogMiddleware(fs))
-	http.ListenAndServe(":3000", nil)
+	if err := http.ListenAndServe(":3000", nil); err != nil {
+		log.Fatal(err)
+	}
 }
