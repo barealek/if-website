@@ -1,0 +1,15 @@
+name: jmarket
+services:
+  web:
+    image: ghcr.io/barealek/ifpage:latest
+
+  cloudflare-tunnel:
+    container_name: tunnel
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel run
+    env_file:
+      - prod.env
+
+    depends_on:
+      - web
