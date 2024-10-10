@@ -10,6 +10,8 @@ services:
     command: tunnel run
     env_file:
       - prod.env
+    environment:
+      - TERM=xterm-256color
 
     depends_on:
       - web
