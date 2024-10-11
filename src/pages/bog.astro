@@ -2,6 +2,8 @@
 
 import Base from "../layouts/BasePage.astro"
 
+import BogTable from "../components/BogTable.svelte"
+
 ---
 
 <Base title="Alek | Blå bog">
@@ -18,34 +20,7 @@ import Base from "../layouts/BasePage.astro"
 			</div>
 
 
-			<div class="flex items-center justify-center mt-8">
-				<div class="grid text-lg text-neutral-100">
-					<div class="flex gap-4 border-b border-purple-500 py-1 ">
-						<p class="font-bold">Kaldenavn</p>
-						<p class="text-right w-full">Alek</p>
-					</div>
-					<div class="flex gap-4 border-b border-purple-500 py-1 ">
-						<p class="font-bold">Øjenfarve</p>
-						<p class="text-right w-full">Blå</p>
-					</div>
-					<div class="flex gap-4 border-b border-purple-500 py-1 ">
-						<p class="font-bold">LoC</p>
-						<p class="text-right w-full">2,7 mil.</p>
-					</div>
-					<div class="flex gap-4 border-b border-purple-500 py-1 ">
-						<p class="font-bold">Interesser</p>
-						<p class="text-right w-full">Idk, kode ig?</p>
-					</div>
-					<div class="flex gap-4 border-b border-purple-500 py-1 ">
-						<p class="font-bold">Konto</p>
-						<p class="text-right w-full">55 kr.</p>
-					</div>
-					<div class="flex gap-4 py-1 ">
-						<p class="font-bold">Yndlingsfarve</p>
-						<p class="text-right w-full">Orange</p>
-					</div>
-				</div>
-			</div>
+			<BogTable />
 
 		</div>
 
