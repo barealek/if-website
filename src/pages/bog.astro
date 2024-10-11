@@ -9,20 +9,44 @@ import BogTable from "../components/BogTable.svelte"
 <Base title="Alek | Blå bog">
 	<section class="flex flex-col items-center gap-4 p-4 h-screen">
 		<div class="bg-neutral-900/50 backdrop-blur-md rounded-xl min-w-[50dvw] p-8 mt-24">
-		<div transition:name="hero" class="flex flex-col items-center">
-				<div transition:name="heroimg" class="size-40 overflow-hidden rounded-full ring-[#222222] ring-2">
-					<img class="overflow-hidden object-cover object-top -mt-10" src="/img/alek.webp" alt="alek">
+			<div transition:name="hero" class="flex flex-col items-center">
+				<div transition:name="heroimg" class="size-40 rounded-full ring-[#222222] ring-2 mb-8">
+					<div class="imageofme backlight">
 				</div>
-				<div class="mt-2 flex gap-1 items-end">
+
+				<div transition:name="herotxt" class="mt-2 flex gap-1 items-end">
 					<h1 class="text-2xl font-bold text-gray-100 text-mulish">Aleksander</h1>
-					<p class="text-gray-400 text-sm">17 år</p>
+					<p class="text-gray-400 text-xs">17 år</p>
 				</div>
 			</div>
 
-
 			<BogTable />
-
 		</div>
 
 	</section>
 </Base>
+
+<style>
+
+.imageofme {
+	position: relative;
+	background-size: cover;
+	background-image: url("/img/alek.webp");
+	object-position: top;
+	border-radius: 9999px;
+	width: 100%;
+	height: 100%;
+}
+
+.backlight:after {
+	content: "";
+	background: inherit;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	position: absolute;
+	filter: blur(10px);
+	border-radius: inherit;
+	z-index: -1;
+}
+</style>
