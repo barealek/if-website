@@ -1,0 +1,35 @@
+---
+import Countdown from "../components/countdowns/Countdown.svelte";
+import BasePage from "../layouts/BasePage.astro";
+
+const countdowns = [
+   {
+      navn: "Juleferie",
+      date: "Dec 20 2024"
+   },
+   {
+      navn: "Studietur",
+      date: "Mar 3 2025"
+   },
+   {
+      navn: "18-års",
+      date: "Jan 11 2025"
+   }
+]
+
+---
+
+<BasePage title="Nedtællinger til diverse">
+  <section class="flex flex-col items-center gap-4 p-4 h-screen">
+
+    <div class="bg-neutral-900/50 backdrop-blur-md rounded-xl min-w-[50dvw] p-8 mt-24 flex flex-col items-center">
+      <h2 class="text-3xl text-white font-bold tracking-wider">Nedtællinger</h2>
+
+      {countdowns.map((countdown) => (
+         <Countdown client:only text={countdown.navn} date={countdown.date}/>
+      ))}
+
+    </div>
+
+  </section>
+</BasePage>
