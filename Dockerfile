@@ -2,7 +2,7 @@ FROM docker.io/golang:1.23-alpine AS server
 
 WORKDIR /server
 COPY server .
-RUN go build -o server
+RUN go build -ldflags "-s -w" -o server
 
 FROM node:20-alpine AS ui
 
