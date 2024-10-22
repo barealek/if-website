@@ -1,8 +1,8 @@
 package main
 
 import (
-	"log"
 	"fmt"
+	"log"
 	"net/http"
 	"strconv"
 	"strings"
@@ -54,7 +54,6 @@ func LogMiddleware(next http.Handler) http.Handler {
 		srw := &statusInterceptor{ResponseWriter: w, statusCode: http.StatusOK}
 		next.ServeHTTP(srw, r)
 
-
 		// STATUS
 		var s string
 		colorCode := determineColorCode(srw.statusCode)
@@ -76,9 +75,9 @@ func LogMiddleware(next http.Handler) http.Handler {
 }
 
 func main() {
-    var fs = http.FileServer(http.Dir("dist"))
-    http.Handle("/", LogMiddleware(fs))
-	if err := http.ListenAndServe(":3000", nil); err != nil {
+	var fs = http.FileServer(http.Dir("dist"))
+	http.Handle("/", LogMiddleware(fs))
+	if err := http.ListenAndServe(":80", nil); err != nil {
 		log.Fatal(err)
 	}
 }
