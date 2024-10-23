@@ -1,13 +1,23 @@
 <script>
    import { onMount } from "svelte";
 
+   import Morten from "./Morten.svelte"
+
    let history = ''
    onMount(() => {
       var k = window.addEventListener('keydown', (e) => {
+         if (showMorten && e.key === "x") {
+            showMorten = false
+         }
          history = history + e.key.toLowerCase()
 
          if (history.includes('maccen')) {
             visible = true
+            history = ''
+         }
+
+         if (history.includes('morten')) {
+            showMorten = true
             history = ''
          }
 
@@ -19,8 +29,12 @@
    })
 
    let visible = false
-
+   let showMorten = false
 </script>
+
+{#if showMorten}
+   <Morten />
+{/if}
 
 {#if visible}
 <div class="absolute inset-0 bg-black/25 h-screen w-screen flex items-center justify-center">
