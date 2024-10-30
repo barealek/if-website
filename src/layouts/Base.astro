@@ -40,16 +40,22 @@ const { title } = Astro.props;
     from {
       -webkit-transform: translate3d(0px, 0px, 0px);
     }
+    50% {
+      -webkit-transform: translate3d(500px, 0px, 0px);
+    }
     to {
-      -webkit-transform: translate3d(1000px, 0px, 0px);
+      -webkit-transform: translate3d(0px, 0px, 0px);
     }
   }
   @-webkit-keyframes move-background {
     from {
       -webkit-transform: translate3d(0px, 0px, 0px);
     }
+    50% {
+      -webkit-transform: translate3d(500px, 0px, 0px);
+    }
     to {
-      -webkit-transform: translate3d(1000px, 0px, 0px);
+      -webkit-transform: translate3d(0px, 0px, 0px);
     }
   }
 
@@ -57,8 +63,11 @@ const { title } = Astro.props;
     from {
       -webkit-transform: translate3d(0px, 0px, 0px);
     }
+    50% {
+      -webkit-transform: translate3d(500px, 0px, 0px);
+    }
     to {
-      -webkit-transform: translate3d(1000px, 0px, 0px);
+      -webkit-transform: translate3d(0px, 0px, 0px);
     }
   }
 
@@ -66,16 +75,19 @@ const { title } = Astro.props;
     from {
       -webkit-transform: translate3d(0px, 0px, 0px);
     }
+    50% {
+      -webkit-transform: translate3d(500px, 0px, 0px);
+    }
     to {
-      -webkit-transform: translate3d(1000px, 0px, 0px);
+      -webkit-transform: translate3d(0px, 0px, 0px);
     }
   }
 
   .animbg{
-	width:10000px;
+	width: 2000px;
 	height: 100%;
-	background: transparent url("/Moon.svg") repeat;
-	background-size: 1000px 400px;
+	background: transparent url("/brick.svg") repeat;
+	background-size: 725px 375px;
 	position: absolute;
 	right: 0;
 	top: 0;
