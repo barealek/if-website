@@ -5,18 +5,9 @@ services:
     environment:
       - TERM=xterm-256color
     tty: true
+    networks:
+      - public
 
-  tunnel:
-    image: cloudflare/cloudflared:latest
-    restart: unless-stopped
-    command: tunnel run
-    env_file:
-      - prod.env
-
-    depends_on:
-      - web
-
-  watchtower:
-    image: containrrr/watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+networks:
+  public:
+    external: true
