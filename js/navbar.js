@@ -7,7 +7,9 @@ const tmpl = `
 
       <a href="/studietur/">studietur</a>
 
-      <a href="/kort/">kort</a>
+      <a href="/medie/">medie</a>
+
+      <a href="https://maps.app.goo.gl/KnnhpjvoVXTJZFqS6" target="_blank">kort</a>
    </div>
 </nav>
 `
