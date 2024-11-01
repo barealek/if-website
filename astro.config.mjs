@@ -9,5 +9,16 @@ export default defineConfig({
   integrations: [tailwind(), svelte()],
   build: {
     assets: "_if",
+  },
+  vite: {
+    server: {
+      proxy: {
+        '/api': {
+          target: 'http://localhost',
+
+          changeOrigin: true,
+        }
+      }
+    }
   }
 });
