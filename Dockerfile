@@ -1,5 +1,6 @@
 FROM denoland/deno:alpine AS tw
-COPY . /app
+WORKDIR /app
+COPY . .
 RUN deno i npm:tailwindcss
 RUN deno run -A --node-modules-dir npm:tailwindcss -o css/compiled.css
 
