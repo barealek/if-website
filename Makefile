@@ -1,5 +1,5 @@
 twd:
-	tailwindcss -o css/compiled.css --watch
+	tailwindcss -o php/css/compiled.css --watch
 
 twb:
-	tailwindcss -o css/compiled.css
+	tailwindcss -o php/css/compiled.css
