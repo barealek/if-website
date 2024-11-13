@@ -7,8 +7,11 @@ function createCountdown(date, text) {
         const now = new Date();
         const timeLeft = dateObj - now;
         if (timeLeft <= 0) {
+            const timeSince = now - dateObj;
+            const daysSince = Math.floor(timeSince / 1000 / 60 / 60 / 24);
+
             countdownElement.innerHTML = `
-                <span class="font-bold tracking-wide">${text}</span> - <span class="text-clock tracking-tight">Nu</span>
+                <span class="font-bold tracking-wide">${text}</span> - <span class="text-clock tracking-tight">For ${daysSince} ${daysSince != 1 ? "dage" : "dag"} siden</span>
             `;
             clearInterval(interval);
             return;
@@ -38,8 +41,9 @@ function createCountdown(date, text) {
 const countdownsContainer = document.getElementById('countdowns');
 if (countdownsContainer) {
    const countdowns = {
-      '2024-12-31 23:59': 'Nytår',
-      '2025-01-11 03:20': 'Fødselsdag'
+      '2024-10-13 00:00': 'Efterårsferie',
+      '2025-01-11 03:20': 'Fødselsdag',
+      '2024-12-20 15:30': 'Juleferie',
    };
 
    for (const [date, text] of Object.entries(countdowns)) {

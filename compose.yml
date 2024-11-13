@@ -3,12 +3,12 @@ services:
     build:
       context: .
     ports:
-      - "8080:80"
+      - 9000:80
     volumes:
-      - ./php/:/var/www/html/
+      - ./php/:/var/www/html:ro
       - ./logs/nginx:/var/log/nginx/
   php:
     image: php:fpm-alpine
     volumes:
-      - ./php/:/var/www/html/
+      - ./php/:/var/www/html:ro
       - ./logs/php.log:/var/log/fpm-php.www.log
