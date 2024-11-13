@@ -5,10 +5,18 @@ function createCountdown(date, text) {
 
     function updateCountdown() {
         const now = new Date();
-        const daysLeft = Math.floor((dateObj - now) / 1000 / 60 / 60 / 24);
-        const hoursLeft = Math.floor((dateObj - now) / 1000 / 60 / 60) % 24;
-        const minutesLeft = Math.floor((dateObj - now) / 1000 / 60) % 60;
-        const secondsLeft = Math.floor((dateObj - now) / 1000) % 60;
+        const timeLeft = dateObj - now;
+        if (timeLeft <= 0) {
+            countdownElement.innerHTML = `
+                <span class="font-bold tracking-wide">${text}</span> - <span class="text-clock tracking-tight">Nu</span>
+            `;
+            clearInterval(interval);
+            return;
+        }
+        const daysLeft = Math.floor(timeLeft / 1000 / 60 / 60 / 24);
+        const hoursLeft = Math.floor(timeLeft / 1000 / 60 / 60) % 24;
+        const minutesLeft = Math.floor(timeLeft / 1000 / 60) % 60;
+        const secondsLeft = Math.floor(timeLeft / 1000) % 60;
 
         countdownElement.innerHTML = `
             <span class="font-bold tracking-wide">${text}</span> -
@@ -21,7 +29,7 @@ function createCountdown(date, text) {
         `;
     }
 
-    setInterval(updateCountdown, 500);
+    const interval = setInterval(updateCountdown, 500);
     updateCountdown();
 
     return countdownElement;
