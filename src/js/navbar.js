@@ -10,6 +10,8 @@ const tmpl = `
       <a href="/medie/">medie</a>
 
       <a href="https://maps.app.goo.gl/KnnhpjvoVXTJZFqS6" target="_blank">kort</a>
+
+      <a href="/lorem">lorem</a>
    </div>
 </nav>
 `
