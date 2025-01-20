@@ -5,10 +5,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>studietur</title>
    <link rel="stylesheet" href="/css/compiled.css">
-   <script defer src="/js/navbar.js"></script>
 </head>
 <body>
-   <div id="navbar"></div>
+   <?php include $_SERVER['DOCUMENT_ROOT'] . '/lib/nav.php'; ?>
+
    <h1>studietur</h1>
 </body>
 </html>

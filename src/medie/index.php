@@ -5,10 +5,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>countdowns</title>
    <link rel="stylesheet" href="/css/compiled.css">
-   <script defer src="/js/navbar.js"></script>
 </head>
 <body>
-   <div id="navbar"></div>
+
+   <?php include $_SERVER['DOCUMENT_ROOT'] . '/lib/nav.php'; ?>
 
    <!-- Card Grid -->
    <div class="grid grid-cols-2 gap-4 py-12 sm:gap-6 md:gap-8 lg:gap-12">

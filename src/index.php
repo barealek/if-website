@@ -5,10 +5,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" href="/css/compiled.css">
-   <script defer src="/js/navbar.js"></script>
 </head>
 <body>
-   <div id="navbar"></div>
+
+   <?php include __DIR__ . '/lib/nav.php'; ?>
 
    <section class="flex flex-col justify-center items-center h-[75vh] w-screen">
 
