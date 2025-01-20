@@ -8,9 +8,9 @@
       "/" => "Blå bog",
       "/countdowns/" => "countdowns",
       "/studietur/" => "studietur",
+      "/login/" => "login",
       "/medie/" => "medie",
       "https://maps.app.goo.gl/KnnhpjvoVXTJZFqS6" => "kort",
-      "/login" => "login",
       "/lorem" => "lorem"
    ];
 
