@@ -9,6 +9,6 @@
    <title>Admin siden</title>
 </head>
 <body>
-   <h1>hej</h1>
+   <h1>Hej <?php echo $_SESSION['user'] ?>!</h1>
 </body>
 </html>

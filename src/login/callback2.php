@@ -10,7 +10,7 @@
 
       if ($ussrname == $user['user'] && $password == $user['pass']) {
          session_start();
-         $_SESSION['session'] = $ussrname;
+         $_SESSION['user'] = $ussrname;
          echo "<script>top.window.location = '/admin/'</script>";
          exit();
       } else {
