@@ -11,7 +11,7 @@
       if ($ussrname == $user['user'] && $password == $user['pass']) {
          session_start();
          $_SESSION['user'] = $ussrname;
-         echo "<script>top.window.location = '/admin/'</script>";
+         header("Location: /panel/");
          exit();
       } else {
          header("Location: /login/bad.php");

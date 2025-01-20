@@ -9,16 +9,15 @@
 </head>
 
 <body class="h-full">
-<div class="flex items-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8">
-  <div class="w-full max-w-sm space-y-10">
-    <form accept-charset="UTF-8" role="form" method="post" action="/login/callback2.php" class="flex flex-col gap-4">
-      Brugernavn <input type="text" name="user" placeholder="..."/>
-      Kode <input type="text" name="pass" placeholder="..."/>
-      <input type="submit" value="login"/>
-    </form>
+  <div class="flex items-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8">
+    <div class="w-full max-w-sm space-y-10">
+      <form accept-charset="UTF-8" role="form" method="post" action="/login/callback3.php" class="flex flex-col gap-4">
+        Brugernavn <input type="text" name="user" placeholder="..."/>
+        Kode <input type="text" name="pass" placeholder="..."/>
+        <input type="submit" value="login"/>
+      </form>
 
+    </div>
   </div>
-</div>
-
 </body>
 </html>
